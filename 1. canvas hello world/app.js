@@ -1,0 +1,50 @@
+$(document).ready(function(){
+    'use strict';
+paper.install(window);
+paper.setup(document.getElementById('mainCanvas'));
+
+
+var tool = new Tool();
+var c = Shape.Circle(200, 200, 80);
+c.fillColor = '#000';
+var text = new PointText(200, 200);
+text.justification = 'center';
+text.fillColor = '#fff';
+text.fontSize = 20;
+text.content = 'hello world';
+tool.onMouseDown = function(event) {
+    var c = Shape.Circle(event.point.x, event.point.y, 20);
+    c.fillColor = '#ff0000';
+}
+
+paper.view.draw();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
