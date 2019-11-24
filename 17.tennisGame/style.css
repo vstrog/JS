@@ -1,0 +1,13 @@
+#canvas {
+    margin: 50px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    
+}
+
+#canvas:hover {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(168,20,0,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(168,20,0,1);
+    box-shadow: 10px 10px 5px 0px rgba(168,20,0,1);
+}
+
