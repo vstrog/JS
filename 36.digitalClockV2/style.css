@@ -1,0 +1,32 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background-color: #ccc;
+    min-height: 40vh;
+    border-radius: 15px;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.781);
+    text-align: center;
+    flex: 0 0 50%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+#clock {
+    padding-top: 30px;
+    width: autopx;
+    height: 100px;
+    background-color: #000;
+    border-radius: 5px;
+    color: #0f0;
+    font-size: 3em;
+    align-self: auto;
+}
