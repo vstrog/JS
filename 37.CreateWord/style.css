@@ -1,0 +1,57 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(179, 53, 74, 0.8), rgba(204, 62, 150, 0.8));
+    color: #333;
+    font-family: 'calibri', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 7px;
+    background: linear-gradient(rgba(114, 29, 194, 0.726), rgba(77, 30, 165, 0.726));
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    flex: 0 0 80%;
+}
+
+button {
+    display: block;
+    font-size: 2rem;
+    margin: 1rem auto;
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    background: rgba(24, 196, 38, 0.769);
+    border-radius: 9px;
+    border: none;
+    outline: none;
+    transition: box-shadow .3s;
+}
+
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+input[type=text] {
+    padding: 0.5rem;
+    margin: 1.2rem;
+    border-radius: 7px;
+    font-size: 1.6rem;
+    border: 3px solid #6cdba4;
+    outline: none;
+}
+
+input[type=text]:focus {
+    box-shadow: 0 0 10px #298870;
+}
+
+.message {
+    margin: 0.5rem 0;
+    font-size: 3rem;
+    color: #3fcf7b;
+}
