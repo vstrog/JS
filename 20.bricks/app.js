@@ -1,9 +1,13 @@
-let canvas, canvasContext;
+  let canvas, canvasContext;
 
 let ballX = 75;
 let ballY = 75;
 let ballSpeedX = 5;
 let ballSpeedY = 7;
+
+const BRICK_W = 100;
+const BRICK_H = 50;
+const BRICK_COUNT = 4;
 
 const PADDLE_WIDTH = 100;
 const PADDLE_THIKNESS = 10;
@@ -11,12 +15,15 @@ const PADDLE_DIST_FROM_EDGE = 60;
 
 let paddleX = 400;
 
+let mouseX;
+let mouseY;
+
 function updateMousePos(e) {
     let rect = canvas.getBoundingClientRect();
     let root = document.documentElement;
 
-    let mouseX = e.clientX - rect.left - root.scrollLeft;
-    let mouseY = e.clientY - rect.top - root.scrollTop;
+    mouseX = e.clientX - rect.left - root.scrollLeft;
+    mouseY = e.clientY - rect.top - root.scrollTop;
     paddleX = mouseX - PADDLE_WIDTH/2;
 }
 
@@ -73,10 +80,18 @@ function ballReset() {
     ballY = canvas.height/2;
 }
 
+function drawBricks() {
+    colorRect(0, 0, BRICK_W, BRICK_H, '#00f');
+}
+
 function drawAll() {
     colorRect(0, 0, canvas.width, canvas.height, '#000');
     colorCircle(ballX, ballY, 10, '#fff');
     colorRect(paddleX, canvas.height - PADDLE_DIST_FROM_EDGE, PADDLE_WIDTH, PADDLE_THIKNESS, '#fff');
+
+    drawBricks();
+
+    colorText(mouseX + "," + mouseY, mouseX, mouseY, '#f00');
 }
 
 function colorRect(topLeftX, topLeftY, boxWidth, boxHeight, fillColor) {
@@ -90,4 +105,10 @@ function colorCircle(centerX, centerY, radius, fillColor) {
     canvasContext.beginPath();
     canvasContext.arc(centerX, centerY, radius, 0, Math.PI*2, true);
     canvasContext.fill(); 
+}
+
+
+function colorText(showWords, textX, textY, fillColor) {
+    canvasContext.fillStyle = fillColor;
+    canvasContext.fillText(showWords, textX, textY);
 }
